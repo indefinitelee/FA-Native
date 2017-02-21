@@ -1,14 +1,19 @@
+'use strict'
 import React, { Component } from 'react';
 import {
+  AppRegistry,
+  Dimensions,
   NavigationExperimental,
   StyleSheet,
+  ScrollView,
   Text,
+  TextInput,
   View
 } from 'react-native';
 
 import Camera from 'react-native-camera';
 
-class FACamera extends Component {
+ class FACamera extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -16,8 +21,13 @@ class FACamera extends Component {
           ref={(cam) => {
             this.camera = cam;
           }}
+          aspect={Camera.constants.Aspect.fill}
+          captureAudio={false}
+          captureMode={Camera.constants.CaptureMode.still}
+          captureTarget={Camera.constants.CaptureTarget.disk}
+          flashMode={Camera.constants.FlashMode.auto}
           style={styles.preview}
-          aspect={Camera.constants.Aspect.fill}>
+          type={Camera.constants.Type.front}>
           <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
         </Camera>
       </View>
@@ -25,11 +35,11 @@ class FACamera extends Component {
   }
 
   takePicture() {
-    this.camera.capture()
-      .then((data) => console.log(data))
-      .catch(err => console.error(err));
+   this.camera.capture()
+    .then((data) => console.log(data))
+    .catch(err => console.error(err));
+    }
   }
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -49,7 +59,12 @@ const styles = StyleSheet.create({
     color: '#000',
     padding: 10,
     margin: 40
-  }
+  },
+    captureButton: {
+    padding: 15,
+    backgroundColor: 'white',
+    borderRadius: 40,
+  },
 });
 
-AppRegistry.registerComponent('FACamera', () => FACamera);
+export default FACamera;
