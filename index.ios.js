@@ -1,39 +1,41 @@
-
-import React, { Component } from 'react';
+import React from 'react';
 import {
   AppRegistry,
+  Button,
   StyleSheet,
+  ScrollView,
   Text,
+  TextInput,
   View
 } from 'react-native';
 
-import App from './App/App.js'
+import { StackNavigator } from 'react-navigation';
 
-export default class fanative extends Component {
+import Login from './Login/Login.js'
+import SecondScene from './SecondScene/SecondScene.js'
+import FACamera from './Camera/FACamera.js'
+
+class HomeScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Welcome',
+  };
   render() {
+    const { navigate } = this.props.navigation;
     return (
-      <App />
+      <View>
+        <Text>Welcome to Forever Amour</Text>;
+        <Button
+          onPress={ () => navigate('Second')}
+          title='Second Page'
+        />
+      </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+const fanative = StackNavigator ({
+  Home: { screen: HomeScreen },
+  Second: { screen: SecondScreen},
 });
 
-AppRegistry.registerComponent('fanative', () => fanative);
+AppRegistry.registerComponent('SimpleApp', () => SimpleApp);
