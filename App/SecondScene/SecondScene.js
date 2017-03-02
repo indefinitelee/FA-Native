@@ -17,7 +17,7 @@ const secondScene = ({ onPress, goBack }) => {
           placeholder='name?'
         />
         <Button
-          title='go forward'
+          title='camera'
           onPress={onPress}
           style={styles.button}
         />
