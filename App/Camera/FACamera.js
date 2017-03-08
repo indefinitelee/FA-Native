@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
+  Button,
   Dimensions,
   NavigationExperimental,
   StyleSheet,
@@ -28,9 +29,14 @@ import Camera from 'react-native-camera';
           captureTarget={Camera.constants.CaptureTarget.disk}
           flashMode={Camera.constants.FlashMode.auto}
           style={styles.preview}
-          type={Camera.constants.Type.front}>
+          type={Camera.constants.Type.back}>
           <Text style={styles.captureButton} onPress={this.takePicture.bind(this)}>Take Photo</Text>
         </Camera>
+        <Button
+          title='go back'
+          onPress={goBack}
+          style={styles.button}
+        />
       </View>
     );
   }
