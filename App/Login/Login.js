@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import { ButtonComp } from '../Button/Button.js';
 import {
-  Button,
   NavigationExperimental,
   StyleSheet,
   Text,
@@ -11,7 +11,7 @@ import {
 const Login = ({ onPress }) => {
   return(
     <View style={styles.container}>
-      <Text>Sup</Text>
+      <Text style={styles.header}>Forever Amour</Text>
       <TextInput
         style={styles.input}
         placeholder='Name'
@@ -20,11 +20,8 @@ const Login = ({ onPress }) => {
         style={styles.input}
         placeholder='password'
       />
-      <Button
-        title='button'
-        onPress={onPress}
-        style={styles.button}
-      />
+
+      <ButtonComp onPress={()=> { onPress() }}/>
     </View>
   )
 }
@@ -36,7 +33,7 @@ const styles = StyleSheet.create({
   container: {
     height: 600,
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'column',
   },
@@ -48,10 +45,11 @@ const styles = StyleSheet.create({
     borderColor: 'rebeccapurple',
     borderWidth: 1
   },
-  button: {
-    height: 40,
-    width: 100,
-    color: '#F7A213',
+  header: {
+    backgroundColor: 'transparent',
+    fontSize: 16,
+    position: 'relative',
+    marginTop: 20,
   }
 })
 
