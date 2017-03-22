@@ -18,11 +18,11 @@ import Camera from 'react-native-camera';
 
  class FACamera extends Component {
 
-   takePicture() {
-    this.camera.capture()
-     .then((data) => console.log(data))
-     .catch(err => console.error(err));
-   }
+  takePicture() {
+   this.camera.capture()
+    .then((data) => console.log(data))
+    .catch(err => console.error(err));
+    }
 
   render() {
     return (
@@ -59,7 +59,7 @@ import Camera from 'react-native-camera';
       </View>
     );
   }
-}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1
