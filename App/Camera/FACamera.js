@@ -30,7 +30,7 @@ import Camera from 'react-native-camera';
           aspect={Camera.constants.Aspect.fill}
           captureAudio={false}
           captureMode={Camera.constants.CaptureMode.still}
-          captureTarget={Camera.constants.CaptureTarget.disk}
+          captureTarget={Camera.constants.CaptureTarget.cameraRoll}
           flashMode={Camera.constants.FlashMode.auto}
           style={styles.preview}
           type={Camera.constants.Type.back}>
