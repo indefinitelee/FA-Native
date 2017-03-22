@@ -34,7 +34,6 @@ import Camera from 'react-native-camera';
           flashMode={Camera.constants.FlashMode.auto}
           style={styles.preview}
           type={Camera.constants.Type.back}>
-          {/* <Button title="Take Picture" style={styles.captureButton} onPress={this.takePicture.bind(this)}/> */}
           <TouchableHighlight
             onPress={() => { this.takePicture() }}
             activeOpacity={0.7}
@@ -44,12 +43,6 @@ import Camera from 'react-native-camera';
           </View>
         </TouchableHighlight>
         </Camera>
-        {/* <ButtonComp onPress={()=> { goBack }}/> */}
-        {/* <Button
-          title='go back'
-          onPress={goBack}
-          style={styles.button}
-        /> */}
       </View>
     );
   }
