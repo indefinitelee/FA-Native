@@ -13,13 +13,54 @@ import {
   TouchableHighlight,
   View
 } from 'react-native';
+import RNFB from 'react-native-fetch-blob';
+import RNFS from 'react-native-fs';
+import _ from 'lodash';
+import apiKey from './api-key';
 import Camera from 'react-native-camera';
+
+const base64 = require('base-64');
+
  class FACamera extends Component {
+
   takePicture() {
    this.camera.capture()
     .then((data) => console.log(data))
     .catch(err => console.error(err));
-    }
+  }
+
+
+
+
+
+  {/*
+  getImageResult(location) {
+    const view = this;
+    console.log('Getting photo from location ${location}');
+
+    RNFB.fetch('GET', location, {'Ocp-Apim-Subscription-Key': apiKey})
+    .then((res) => {
+      const response = res.json();
+
+      //check if processing is done
+      if (response.status === 'Succeeded') {
+        const processedResult = JSON.parese(response.processingResult)
+      }
+    })
+  }
+*/}
+  parseVideoResult(fragments) {
+      const emotions = {
+          neutral: [],
+          happiness: [],
+          surprise: [],
+          sadness: [],
+          anger: [],
+          disgust: [],
+          fear: [],
+          contempt: []
+      };
+
   render() {
     return (
       <View style={styles.container}>
