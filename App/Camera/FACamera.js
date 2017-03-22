@@ -59,6 +59,7 @@ import Camera from 'react-native-camera';
       </View>
     );
   }
+}
 
 const styles = StyleSheet.create({
   container: {
