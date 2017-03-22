@@ -30,7 +30,9 @@ import Camera from 'react-native-camera';
           flashMode={Camera.constants.FlashMode.auto}
           style={styles.preview}
           type={Camera.constants.Type.back}>
-          <Text style={styles.captureButton} onPress={this.takePicture.bind(this)}>Take Photo</Text>
+          <Button
+            <Text style={styles.captureButton} onPress={this.takePicture.bind(this)}>Take Photo</Text>
+          </Button>
         </Camera>
         <Button
           title='go back'
