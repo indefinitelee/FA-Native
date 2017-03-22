@@ -40,7 +40,7 @@ import Camera from 'react-native-camera';
           type={Camera.constants.Type.back}>
           {/* <Button title="Take Picture" style={styles.captureButton} onPress={this.takePicture.bind(this)}/> */}
           <TouchableHighlight
-            onPress={() => { this.takePicture.bind(this) }}
+            onPress={() => { this.takePicture() }}
             activeOpacity={0.7}
             >
           <View>
