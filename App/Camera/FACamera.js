@@ -38,7 +38,15 @@ import Camera from 'react-native-camera';
           flashMode={Camera.constants.FlashMode.auto}
           style={styles.preview}
           type={Camera.constants.Type.back}>
-          <Button title="Take Picture" style={styles.captureButton} onPress={this.takePicture.bind(this)}/>
+          {/* <Button title="Take Picture" style={styles.captureButton} onPress={this.takePicture.bind(this)}/> */}
+          <TouchableHighlight
+            onPress={() => { this.takePicture.bind(this) }}
+            activeOpacity={0.7}
+            >
+          <View>
+            <Text style={styles.buttonText}>Take Picture</Text>
+          </View>
+        </TouchableHighlight>
         </Camera>
 
         {/* <ButtonComp onPress={()=> { goBack }}/> */}
@@ -64,7 +72,10 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width
   },
    buttonText: {
-   color: "#000"
+     fontSize: 18,
+     color: '#33AAFF',
+     marginBottom: 0,
+     backgroundColor: '#fff'
   },
   captureButton: {
     flex: 0,
@@ -72,7 +83,9 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     color: '#000',
     padding: 10,
-    margin: 40
+    margin: 40,
+    position: 'absolute',
+    top: 50
   },
 });
 
