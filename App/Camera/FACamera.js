@@ -1,5 +1,6 @@
 'use strict'
 import React, { Component } from 'react';
+import { ButtonComp } from '../Button/Button.js';
 import {
   AppRegistry,
   Button,
@@ -17,13 +18,12 @@ import Camera from 'react-native-camera';
 
  class FACamera extends Component {
 
-
   takePicture() {
    this.camera.capture()
     .then((data) => console.log(data))
     .catch(err => console.error(err));
     }
-  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -37,20 +37,20 @@ import Camera from 'react-native-camera';
           captureTarget={Camera.constants.CaptureTarget.disk}
           flashMode={Camera.constants.FlashMode.auto}
           style={styles.preview}
-          type={Camera.constants.Type.front}>
-          <Button
-            <Text style={styles.captureButton} onPress={this.takePicture.bind(this)}>Take Photo</Text>
-          </Button>
+          type={Camera.constants.Type.back}>
+          <Button title="Take Picture" style={styles.captureButton} onPress={this.takePicture.bind(this)}/>
         </Camera>
-        <Button
+
+        {/* <ButtonComp onPress={()=> { goBack }}/> */}
+
+        {/* <Button
           title='go back'
           onPress={goBack}
           style={styles.button}
-        />
+        /> */}
       </View>
     );
   }
-
 
 const styles = StyleSheet.create({
   container: {
