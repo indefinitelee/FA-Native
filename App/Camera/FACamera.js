@@ -26,41 +26,35 @@ const base64 = require('base-64');
   takePicture() {
    this.camera.capture()
     .then((data) => console.log(data))
-    .catch(err => console.error(err));
+    .catch(err => console.error(err))
+    this.getImageEmotion();
   }
 
+  getImageEmotion(location) {
+    view.camera.capture({mode: Camera.constants.CaptureMode.still})
+    .then((file) => {
+      const path = file.path.replace('file://', '');
+      let data = '';
+      })
+      RNFetchBlob.fs.readFile(path, 'base64')
+      .then((data) => {
+      // handle the data ..
+      })
+    }
 
-
-
-
-  {/*
-  getImageResult(location) {
-    const view = this;
-    console.log('Getting photo from location ${location}');
-
-    RNFB.fetch('GET', location, {'Ocp-Apim-Subscription-Key': apiKey})
-    .then((res) => {
-      const response = res.json();
-
-      //check if processing is done
-      if (response.status === 'Succeeded') {
-        const processedResult = JSON.parese(response.processingResult)
-      }
-    })
-  }
-*/}
   parseVideoResult(fragments) {
-      const emotions = {
-          neutral: [],
-          happiness: [],
-          surprise: [],
-          sadness: [],
-          anger: [],
-          disgust: [],
-          fear: [],
-          contempt: []
+    const emotions = {
+      neutral: [],
+      happiness: [],
+      surprise: [],
+      sadness: [],
+      anger: [],
+      disgust: [],
+      fear: [],
+      contempt: []
       };
-
+    }
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -80,6 +74,7 @@ const base64 = require('base-64');
             onPress={() => { this.takePicture() }}
             activeOpacity={0.7}
             >
+
           <View>
             <Text style={styles.buttonText}>Take Picture</Text>
           </View>
