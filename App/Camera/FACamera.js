@@ -16,7 +16,7 @@ import {
 import RNFB from 'react-native-fetch-blob';
 import RNFS from 'react-native-fs';
 import _ from 'lodash';
-import apiKey from './api-key';
+import apiKey from '.api-key';
 import Camera from 'react-native-camera';
 
 const base64 = require('base-64');
@@ -54,7 +54,6 @@ const base64 = require('base-64');
       contempt: []
       };
     }
-  }
 
   render() {
     return (
@@ -90,7 +89,7 @@ const base64 = require('base-64');
       </View>
     );
   }
-}
+  }
 const styles = StyleSheet.create({
   container: {
     flex: 1

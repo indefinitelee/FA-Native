@@ -61,7 +61,7 @@ export default class App extends Component {
   handleBackAction() {
     return this._handleAction({ type: 'pop' });
   }
-
+r
   _renderRoute (key) {
   if (key === 'Login') {
     return <Login

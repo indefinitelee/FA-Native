@@ -1,7 +1,7 @@
 # OSX
 #
 .DS_Store
-.api-key
+
 # Xcode
 #
 build/
@@ -41,9 +41,6 @@ buck-out/
 \.buckd/
 android/app/libs
 *.keystore
-
-.expo
-.env
 
 # fastlane
 #
