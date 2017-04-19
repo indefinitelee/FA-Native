@@ -55,6 +55,7 @@ const base64 = require('base-64');
       };
     }
   }
+
   render() {
     return (
       <View style={styles.container}>
