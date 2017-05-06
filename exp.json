@@ -1,21 +1,19 @@
 {
   "name": "fanative",
-  "description": "An empty new project",
+  "description": "bridal emotion recognition",
   "slug": "fanative",
-  "privacy": "public",
-  "sdkVersion": "16.0.0",
+  "sdkVersion": "14.0.0",
   "version": "1.0.0",
   "orientation": "portrait",
   "primaryColor": "#cccccc",
-  "icon": "./assets/icons/app.png",
+  "icon": "https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png",
   "loading": {
-    "icon": "./assets/icons/loading.png",
+    "icon": "https://s3.amazonaws.com/exp-icon-assets/ExpoEmptyManifest_192.png",
     "hideExponentText": false
   },
   "packagerOpts": {
-    "assetExts": ["ttf", "mp4"]
-  },
-  "ios": {
-    "supportsTablet": true
+    "assetExts": [
+      "ttf"
+    ]
   }
 }

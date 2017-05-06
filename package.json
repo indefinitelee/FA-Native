@@ -2,8 +2,8 @@
   "name": "fanative",
   "version": "0.0.1",
   "private": true,
-  "author": null,
-  "main": "main.js",
+  "author": "Lee Wilson and Darryl Zeigler",
+  "main": "",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
@@ -11,12 +11,13 @@
   "dependencies": {
     "base-64": "0.1.0",
     "dotenv": "^4.0.0",
-    "expo": "^15.0.2",
-    "react": "16.0.0-alpha.6",
-    "react-native": "0.43.3",
+    "expo": "~15.0.0",
+    "react": "~15.4.2",
+    "react-native": "github:exponent/react-native#sdk-15.0.0",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
     "react-native-fetch-blob": "^0.10.4",
-    "react-native-fs": "2.1.0-rc.1"
+    "react-native-fs": "2.1.0-rc.1",
+    "@expo/vector-icons": "~4.0.0"
   },
   "devDependencies": {
     "babel-jest": "18.0.0",
