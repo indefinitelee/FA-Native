@@ -11,6 +11,7 @@ function readEmotion(req, res, next) {
     },
     method: 'POST',
     body: JSON.stringify(req.body),
+// we can't do req.body in react native - need to find another way to get image
   })
   .then(r => r.json())
   .then((emotions) => {
