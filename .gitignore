@@ -1,7 +1,7 @@
 # OSX
 #
 .DS_Store
-.api-key
+
 # Xcode
 #
 build/
@@ -39,11 +39,7 @@ yarn-error.log
 # BUCK
 buck-out/
 \.buckd/
-android/app/libs
 *.keystore
-
-.expo
-.env
 
 # fastlane
 #

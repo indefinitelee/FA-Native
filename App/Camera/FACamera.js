@@ -16,9 +16,9 @@ import {
 import RNFB from 'react-native-fetch-blob';
 import RNFS from 'react-native-fs';
 import _ from 'lodash';
-import apiKey from './api-key';
 import Camera from 'react-native-camera';
 
+const apikey = '385a65410633442fb1df79ad9a9f651e';
 const base64 = require('base-64');
 
  class FACamera extends Component {
@@ -54,7 +54,7 @@ const base64 = require('base-64');
       contempt: []
       };
     }
-  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -89,7 +89,7 @@ const base64 = require('base-64');
       </View>
     );
   }
-}
+  }
 const styles = StyleSheet.create({
   container: {
     flex: 1
