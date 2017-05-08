@@ -15,5 +15,11 @@
     "assetExts": [
       "ttf"
     ]
-  }
-}
+  },
+  "ios": {
+    "bundleIdentifier": "org.fantative.exp"
+  },
+   "android": {
+     "package": "org.rnplay.exp",
+   }
+ }
